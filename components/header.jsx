@@ -4,8 +4,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import R from '../public/R.svg'
 import Image from 'next/image'
 import Link from 'next/link'
-import {user, userNavigation, navigation} from '../collection/collection'
-
+import { user, userNavigation, navigation } from '../collection/collection'
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
@@ -21,7 +20,7 @@ export default function Header() {
                 <div className="flex items-center justify-between h-16">
                   <div className="flex items-center">
                     <div className="flex-shrink-0">
-                      <Link passhref='/' passHref={true}>
+                      <Link href='/'>
                       <Image
                         className="h-8 w-8"
                         src={R}
@@ -56,7 +55,7 @@ export default function Header() {
                         <div>
                           <Menu.Button className="max-w-xs bg-rose-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                             <span className="sr-only">Open user menu</span>
-                            <Image className="h-8 w-8 rounded-full" src={user.imageUrl} alt="" />
+                            <img className="h-8 w-8 rounded-full" src={user.imageUrl} alt="" />
                           </Menu.Button>
                         </div>
                         <Transition
@@ -122,7 +121,7 @@ export default function Header() {
                 <div className="pt-4 pb-3 border-t border-gray-700">
                   <div className="flex items-center px-5">
                     <div className="flex-shrink-0">
-                      <Image className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
+                      <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
                     </div>
                   
                       <div className="ml-3">
