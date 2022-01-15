@@ -67,6 +67,7 @@ export default function Home() {
                       <Image
                         className="h-8 w-auto sm:h-10"
                         src={R}
+                        alt=""
                       />
                     </a>
                     <div className="-mr-2 flex items-center md:hidden">
@@ -175,7 +176,7 @@ export default function Home() {
         </div>
       </div>
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <img
+        <Image
           className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
           src="https://images.pexels.com/photos/7088530/pexels-photo-7088530.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
           alt=""

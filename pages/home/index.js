@@ -1,6 +1,7 @@
 import Header from '../../components/header'
 import { people } from '../collection/collection'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function UserHome() {
   return (
@@ -66,7 +67,7 @@ export default function UserHome() {
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">
                         <div className="flex-shrink-0 h-10 w-10">
-                          <img className="h-10 w-10 rounded-full" src={person.image} alt="" />
+                          <Image className="h-10 w-10 rounded-full" src={person.image} alt="" />
                         </div>
                         <div className="ml-4">
                           <div className="text-sm font-medium text-gray-900">{person.name}</div>
