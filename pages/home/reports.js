@@ -1,6 +1,6 @@
 import Header from '../../components/header'
 import Image from 'next/image'
-import { people } from '../collection/collection'
+import { people } from '../../collection/collection'
 
 export default function UserHome() {
   return (

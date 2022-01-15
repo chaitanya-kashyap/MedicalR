@@ -4,7 +4,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import R from '../public/R.svg'
 import Image from 'next/image'
 import Link from 'next/link'
-import {user, userNavigation, navigation} from '../pages/collection/collection'
+import {user, userNavigation, navigation} from '../collection/collection'
 
 
 function classNames(...classes) {
