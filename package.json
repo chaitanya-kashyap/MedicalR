@@ -9,7 +9,7 @@
   },
   "engines": {
     "npm": ">=8.1.2",
-    "node": ">=16.13.1"
+    "node": ">=14.x"
   },
   "dependencies": {
     "@headlessui/react": "^1.4.2",
