@@ -1,7 +1,7 @@
 import Header from '../../components/header'
 import Image from 'next/image'
 
-export const people = [
+const people = [
   {
     name: 'Jane Cooper',
     hospital: 'New York City Hospital',

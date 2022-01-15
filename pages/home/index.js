@@ -2,7 +2,7 @@ import Header from '../../components/header'
 import Link from 'next/link'
 import Image from 'next/image'
 
-export const people = [
+const people = [
   {
     name: 'Jane Cooper',
     hospital: 'New York City Hospital',
