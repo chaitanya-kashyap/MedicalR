@@ -156,7 +156,7 @@ export default function Home() {
                   <div className='className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-rose-800 hover:bg-rose-800 md:py-4 md:text-lg md:px-10"' >
 
                   
-                  <Link href='/login'>
+                  <Link href='/home'>
                     Get started
                   </Link>
                   </div>
