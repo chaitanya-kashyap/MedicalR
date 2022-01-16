@@ -78,7 +78,9 @@ export default function Example() {
                 <span className="absolute left-0 inset-y-0 flex items-center pl-3">
                   <LockClosedIcon className="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" aria-hidden="true" />
                 </span>
+                  <a href='/home'>
                 Sign in
+                    </a>
               </button>
             </div>
           </form>
