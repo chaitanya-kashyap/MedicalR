@@ -7,6 +7,8 @@ import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { DeviceMobileIcon, DocumentDuplicateIcon, ShieldCheckIcon, LockClosedIcon } from '@heroicons/react/outline'
 import Footer from '../components/footer'
+import { useSession, signIn } from "next-auth/react"
+import { useRouter } from 'next/router'
 
 
 const features = [
@@ -42,6 +44,13 @@ const navigation = [
 ]
 
 export default function Home() {
+
+  const { data: session } = useSession();
+  const router = useRouter();
+  if (session) {
+    router.push('/home');
+  }
+
   return (
     <>
     <div className="relative bg-white overflow-hidden">
@@ -83,9 +92,9 @@ export default function Home() {
                       {item.name}
                     </a>
                   ))}
-                  <a href="./login" className="font-medium ml-6 text-rose-800 hover:text-rose-700">
-                    Log in
-                  </a>
+                  <button className="font-medium ml-6 text-rose-800 hover:text-rose-700" onClick={() => signIn()}>
+                      Sign in
+                    </button>  
                 </div>
               </nav>
             </div>
@@ -130,12 +139,9 @@ export default function Home() {
                       </a>
                     ))}
                   </div>
-                    <a
-                    href="#"
-                    className="block w-full px-5 py-3 text-center font-medium text-rose-800 bg-gray-50 hover:bg-gray-100"
-                  >
-                    Log in
-                  </a>                
+                  <button className="font-medium ml-6 text-rose-800 hover:text-rose-700" onClick={() => signIn()}>
+                      Sign in
+                    </button>                 
                 </div>
               </Popover.Panel>
             </Transition>

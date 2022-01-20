@@ -8,9 +8,6 @@ export const user = {
     { name: 'Records', href: '/home', current: true },
     { name: 'Reports', href: '/home/reports', current: false },
   ]
- export const userNavigation = [
-    { name: 'Sign out', href: '#' }
-  ]
   
   export const people = [
     {
