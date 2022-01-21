@@ -163,9 +163,9 @@ export default function Home() {
                   <div className='className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-rose-800 hover:bg-rose-800 md:py-4 md:text-lg md:px-10"' >
 
                   
-                  <Link href='/home'>
+                  <button onClick={() => signIn()}>
                     Get started
-                  </Link>
+                  </button>
                   </div>
                 </div>
                 <div className="mt-3 sm:mt-0 sm:ml-3">
@@ -228,9 +228,9 @@ export default function Home() {
         <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
           <div className="inline-flex rounded-md shadow">
             <div className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-rose-800 hover:bg-rose-700">
-              <Link href='/login' >
+              <button onClick={() => signIn()}>
               Get started
-              </Link>
+              </button>
             </div>
             
           </div>
