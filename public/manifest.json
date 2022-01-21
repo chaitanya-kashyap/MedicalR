@@ -1,12 +1,12 @@
 {
     "theme_color": "#9f1239",
-    "background_color": "#be123c",
+    "background_color": "#9f1239",
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
     "name": "MedicalR",
-    "description": "MedicalR's PWA",
     "short_name": "MedicalR",
+    "description": "Welcome to MedicalR",
     "icons": [
         {
             "src": "/icon-192x192.png",
