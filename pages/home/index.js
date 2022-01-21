@@ -25,7 +25,7 @@ export default function UserHome() {
         <main>
           <div className="max-w-7xl mx-auto pb-6 sm:px-6 lg:px-8">
             <div className="flex flex-col">
-      <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div className="-my-2 sm:-mx-6 lg:-mx-8">
         <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
           <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
             <table className="min-w-full divide-y divide-gray-200">
@@ -37,27 +37,29 @@ export default function UserHome() {
                   >
                     Name
                   </th>
+              
                   <th
                     scope="col"
-                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    className="px-6 py-3 text-left text-xs hidden sm:table-cell font-medium text-gray-500 uppercase tracking-wider"
                   >
                     Hospital
                   </th>
                   <th
                     scope="col"
-                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    className="px-6 py-3 text-left text-xs hidden sm:table-cell font-medium text-gray-500 uppercase tracking-wider"
                   >
                     Disease
                   </th>
                   <th
                     scope="col"
-                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    className="px-6 py-3 text-left hidden sm:table-cell text-xs font-medium text-gray-500 uppercase tracking-wider"
                   >
                     Gender
                   </th>
                   <th scope="col">
                     <span className="sr-only">View</span>
                   </th>
+                
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
@@ -75,16 +77,16 @@ export default function UserHome() {
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm text-gray-900">{person.hospital}</div>
+                      <div className="text-sm hidden sm:table-cell text-gray-900">{person.hospital}</div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm text-gray-900">{person.disease}</div>
+                    <div className="text-sm hidden sm:table-cell text-gray-900">{person.disease}</div>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{person.gender}</td>
+                    <td className="px-6 py-4 hidden sm:table-cell whitespace-nowrap text-sm text-gray-500">{person.gender}</td>
                     <td className="pr-6 py-4 whitespace-nowrap text-left text-sm font-medium">
                       <button type="button"
-                        className="bg-rose-800 p-1 rounded-full text-rose-800 hover:text-rose-800" >
-                          <div className="text-white hover:text-white mx-4 my-4" >
+                        className="bg-rose-800 p-1 rounded-3xl text-rose-800 hover:text-rose-800" >
+                          <div className="text-white hover:text-white mx-4 my-0" >
                             <Link href='/home/id'>
                               View
                             </Link>

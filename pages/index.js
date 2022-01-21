@@ -139,9 +139,10 @@ export default function Home() {
                       </a>
                     ))}
                   </div>
-                  <button className="font-medium ml-6 text-rose-800 hover:text-rose-700" onClick={() => signIn()}>
+                  <button className="pb-4 font-medium ml-5 text-rose-800 hover:text-rose-700" onClick={() => signIn()}>
                       Sign in
-                    </button>                 
+                    </button>  
+
                 </div>
               </Popover.Panel>
             </Transition>

@@ -14,7 +14,7 @@ function classNames(...classes) {
 
 export default function Header() {
     return (
-        <div className="min-h-full drop-shadow-lg sticky top-0 z-50">
+        <div className="min-h-full drop-shadow-lg sticky top-0">
         <Disclosure as="nav" className="bg-white ">
           {({ open }) => (
             <>
@@ -26,7 +26,7 @@ export default function Header() {
                       <Image
                         className="h-8 w-8"
                         src={R}
-                        alt="Workflow"
+                        alt="MedicalR"
                       />
                       </Link>
                     </div>
