@@ -2,6 +2,7 @@ import 'tailwindcss/tailwind.css'
 import Image from 'next/image'
 import R from '../public/R.svg'
 import Link from 'next/link'
+import Head from 'next/head'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
@@ -39,8 +40,8 @@ const features = [
 ]
 
 const navigation = [
-  { name: 'About Us', href: '#' },
-  { name: 'Features', href: '#' },
+  { name: 'About Us', href: '/about' },
+  { name: 'Contact', href: '/contact' },
 ]
 
 export default function Home() {
@@ -65,6 +66,15 @@ export default function Home() {
           >
             <polygon points="50,0 100,0 50,100 0,100" />
           </svg>
+
+          <Head>
+            <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+            <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+            <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+            <link rel="manifest" href="/site.webmanifest" />
+            <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+            <meta name="theme-color" content="#ffffff" />
+         </Head>
 
           <Popover>
             <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
@@ -232,7 +242,6 @@ export default function Home() {
               Get started
               </button>
             </div>
-            
           </div>
           <div className="ml-3 inline-flex rounded-md shadow">
             <a
