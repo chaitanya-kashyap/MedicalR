@@ -15,32 +15,20 @@ export default function About() {
   return (
     <>
     <Landing />
-    <div className="bg-gray-50">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+    <div className="bg-white">
+      <div className="max-w-7xl container mx-auto py-8 px-4 sm:px-6 lg:py-14 lg:px-8 lg:flex lg:items-center lg:justify-between">
         <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-          <span className="block">Ready to dive in?</span>
-          <span className="block text-indigo-600">Start your free trial today.</span>
+          <span className="block text-rose-800 text-5xl">About Us</span>
+          <p className='text-md font-normal py-8' >
+            Incididunt sint est ex incididunt dolor. Sint id nulla aliquip in sunt exercitation ex sint enim in consequat. Laboris cillum duis velit reprehenderit consequat irure esse nulla aute consectetur mollit sint quis. Tempor dolore laborum aute aliqua id aliqua enim adipisicing reprehenderit et non.
+            Non qui eiusmod excepteur ipsum non tempor do irure amet id veniam pariatur aute proident. Laboris pariatur non aliquip et ut elit tempor ea nulla mollit incididunt excepteur sint non. Adipisicing ad ullamco in minim. Ea eu et id fugiat. Nulla velit pariatur excepteur eu amet ex et elit ut officia id anim laboris est. Lorem officia nulla Lorem veniam nulla sit consequat ullamco.
+          </p>
+          
         </h2>
-        <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-          <div className="inline-flex rounded-md shadow">
-            <a
-              href="#"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
-            >
-              Get started
-            </a>
-          </div>
-          <div className="ml-3 inline-flex rounded-md shadow">
-            <a
-              href="#"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50"
-            >
-              Learn more
-            </a>
-          </div>
-        </div>
+        
       </div>
     </div>
+    <Footer />
     </>
   )
 }

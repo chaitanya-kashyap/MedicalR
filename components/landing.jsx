@@ -12,6 +12,7 @@ function classNames(...classes) {
   }
 
   const navigation = [
+    { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ]
@@ -19,7 +20,7 @@ function classNames(...classes) {
 
 export default function Landing() {
     return (
-        <div className="min-h-full relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32 top-0">
+        <div className="min-h-full relative z-10 pb-8 px-9 py-3 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-8 xl:pb-2 top-0">
         <Disclosure as="nav" className="bg-white ">
           {({ open }) => (
             <>
@@ -44,8 +45,8 @@ export default function Landing() {
                             className={classNames(
                               item.current
                                 ? 'bg-rose-800 text-white'
-                                : 'text-rose-800 hover:bg-rose-700 hover:text-white',
-                              'px-3 py-2 rounded-md text-sm font-medium'
+                                : 'text-gray-500 hover:text-rose-800',
+                              'px-3 py-2 rounded-md text-md font-medium'
                             )}
                             aria-current={item.current ? 'page' : undefined}
                           >
