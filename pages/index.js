@@ -15,26 +15,22 @@ import { useRouter } from 'next/router'
 const features = [
   {
     name: 'Digital Medical Records',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    description: 'This application targets hospitals to store records digitally rather than creating physical records.',
     icon: DocumentDuplicateIcon,
   },
   {
     name: 'Blockchain enabled',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    description: 'The records stored of patients is completely secured by Blockchain, the best security for storing data.',
     icon: LockClosedIcon,
   },
   {
     name: 'Safe and Secure ',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    description: 'The application offers secure and safe environment connected to offical hospital accounts so that all the transaction takes place from official institute.',
     icon: ShieldCheckIcon,
   },
   {
     name: 'Progressive Web App',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    description: 'For users those are sometimes time dependent for usage this application provides native app experience in their mobile without taking any space and working like a official app.',
     icon: DeviceMobileIcon,
   },
 ]
@@ -165,8 +161,9 @@ export default function Home() {
                 <span className="block text-rose-800 xl:inline">Medical records</span>
               </h1>
               <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-                fugiat veniam occaecat fugiat aliqua.
+              The application is entirely based on the
+              <br></br>
+               electronic health records of patients.
               </p>
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
@@ -180,7 +177,7 @@ export default function Home() {
                 </div>
                 <div className="mt-3 sm:mt-0 sm:ml-3">
                   <a
-                    href="#"
+                    href="/doctors"
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-rose-800 bg-rose-100 hover:bg-rose-200 md:py-4 md:text-lg md:px-10"
                   >
                     For Doctors
@@ -206,10 +203,9 @@ export default function Home() {
         <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
           A better way to store records
         </p>
-        <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-          Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in
-          accusamus quisquam.
-        </p>
+        {/* <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+          
+        </p> */}
       </div>
 
       <div className="mt-10">
