@@ -3,6 +3,19 @@ import Header from '../../components/header'
 import Link from 'next/link'
 import { connectToDatabase } from '../../util/mongodb'
 
+export async function getServerSideProps(context) {
+  const { db } = await connectToDatabase();
+
+  const patients = await db.collection("patients").find({}).toArray();
+
+  return {
+    props: {
+      patients: JSON.parse(JSON.stringify(patients)),
+    },
+  };
+  
+}
+
 export default function UserHome({ patients }) {
   return (
     <>
@@ -108,15 +121,4 @@ export default function UserHome({ patients }) {
   )
 }
 
-export async function getServerSideProps(context) {
-  const { db } = await connectToDatabase();
 
-  const patients = await db.collection("patients").find({}).toArray();
-
-  return {
-    props: {
-      patients: JSON.parse(JSON.stringify(patients)),
-    },
-  };
-  
-}
