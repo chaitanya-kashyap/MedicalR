@@ -38,8 +38,8 @@ export default function Header() {
                             href={item.href}
                             className={classNames(
                               item.current
-                                ? 'bg-rose-800 text-white'
-                                : 'text-rose-800 hover:bg-rose-700 hover:text-white',
+                                ? ' text-gray-500'
+                                : 'text-gray-500',
                               'px-3 py-2 rounded-md text-sm font-medium'
                             )}
                             aria-current={item.current ? 'page' : undefined}
