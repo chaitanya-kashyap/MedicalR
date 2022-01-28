@@ -1,8 +1,9 @@
 import Header from '../../components/header'
-import { people } from '../../collection/collection'
+// import { people } from '../../collection/collection'
 import Link from 'next/link'
+import { connectToDatabase } from '../../util/mongodb'
 
-export default function UserHome() {
+export default function UserHome({ patients }) {
   return (
     <>
       <Header/>
@@ -63,26 +64,26 @@ export default function UserHome() {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
-                {people.map((person) => (
-                  <tr key={person.mobile}>
+                {patients.map((patient) => (
+                  <tr key={patient.name}>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">
                         <div className="flex-shrink-0 h-10 w-10">
-                          <img className="h-10 w-10 rounded-full" src={person.image} alt="" />
+                          <img className="h-10 w-10 rounded-full" src={patient.image} alt="" />
                         </div>
                         <div className="ml-4">
-                          <div className="text-sm font-medium text-gray-900">{person.name}</div>
-                          <div className="text-sm text-gray-500">{person.mobile}</div>
+                          <div className="text-sm font-medium text-gray-900">{patient.name}</div>
+                          <div className="text-sm text-gray-500">{patient.mobile}</div>
                         </div>
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <div className="text-sm hidden sm:table-cell text-gray-900">{person.hospital}</div>
+                      <div className="text-sm hidden sm:table-cell text-gray-900">{patient.hospital}</div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm hidden sm:table-cell text-gray-900">{person.disease}</div>
+                    <div className="text-sm hidden sm:table-cell text-gray-900">{patient.disease}</div>
                     </td>
-                    <td className="px-6 py-4 hidden sm:table-cell whitespace-nowrap text-sm text-gray-500">{person.gender}</td>
+                    <td className="px-6 py-4 hidden sm:table-cell whitespace-nowrap text-sm text-gray-500">{patient.gender}</td>
                     <td className="pr-6 py-4 whitespace-nowrap text-left text-sm font-medium">
                       <button type="button"
                         className="bg-rose-800 p-1 rounded-3xl text-rose-800 hover:text-rose-800" >
@@ -101,8 +102,21 @@ export default function UserHome() {
         </div>
       </div>
     </div>
-          </div>
-        </main>
+  </div>
+</main>
     </>
   )
+}
+
+export async function getServerSideProps(context) {
+  const { db } = await connectToDatabase();
+
+  const patients = await db.collection("patients").find({}).toArray();
+
+  return {
+    props: {
+      patients: JSON.parse(JSON.stringify(patients)),
+    },
+  };
+  
 }
